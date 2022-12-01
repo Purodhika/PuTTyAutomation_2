@@ -50,7 +50,10 @@ namespace PuTTyAutomation_2
 
                 Passwords();
                 sport.WriteLine("en");
-                Passwords();
+                SendKeys.Send("{ENTER}");
+                sport.WriteLine("class");
+                SendKeys.Send("{ENTER}");
+                //Passwords();
 
                 message = sport.ReadLine();
                 
@@ -92,8 +95,8 @@ namespace PuTTyAutomation_2
         private void Passwords()
         {
             sport.WriteLine("cisco");
-            sport.WriteLine("{ENTER}");
-            sport.WriteLine("class");
+            SendKeys.Send("{ENTER}");
+           // sport.WriteLine("class");
         }
 
         private void UnknownRouterPwd()
